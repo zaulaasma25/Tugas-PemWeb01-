@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Order Form</title>
+ <style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f7f7f8;
+    padding: 40px 15px;
+    box-sizing: border-box;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 25px 35px;
+      border-radius: 10px;
+      width: 380px;
+    }
+
+ h2 {
+     margin: 0 0 .5rem;
+     font-size: 1.5rem;
+ }
+
+ .row {
+     display: grid;
+     grid-template-columns: 180px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+     display: block;
+     margin-bottom: 6px;
+ }
+ 
+ small {
+      display: block;
+      color: #666;
+      font-size: 0.8rem;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="email"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="tel"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="text"] {
+      width: 100%;
+      padding: 10px 5px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      font-size: 14px;
+      margin-top: 5px;
+ }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px 15px;
+      margin-bottom: 20px;
+    }
+    
+    textarea {
+      min-height: 70px;
+      padding: 10px ;
+
+    .checkbox-group label {
+      font-weight: normal;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+     border: 1px solid #1e88e5;
+     background: #2196f3;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .5rem;
+     cursor: pointer;
+ }
+</style>
+</head>
+<body>
+  <div class="form-container">
+  <h2>Order Form</h2>
+    <label>Name</label>
+    <input type="text" placeholder="John Doe" required>
+
+    <div class="checkbox-group"
+    <div class="input-row">
+      <div>
+        <label>Email</label>
+        <input type="email" placeholder="john.doe@example.com" required>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" placeholder="+1 (555) 123-4567" required>
+      </div>
+    </div>
+    
+    <h2>Order Details</h2>
+    <div class="checkbox-group">
+      <div class="input-row">
+        <label>Product</label>
+        <select required>
+          <option value="" disabled selected>Select a product</option>
+          <option>T-Shirt</option>
+          <option>Jacket</option>
+          <option>Hat</option>
+        </select>
+      </div>
+      <div>
+        <label>Quantity</label>
+        <input type="number" min="1" value="1">
+      </div>
+    </div>
+      
+    <div>
+    <label>Size</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Small</label>
+      <label><input type="checkbox"> Medium</label>
+      <label><input type="checkbox"> Large</label>
+      <label><input type="checkbox"> XL</label>
+    </div>
+    </div>
+    
+    <div>
+    <label>Color</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox"> Red</label>
+      <label><input type="checkbox"> Blue</label>
+      <label><input type="checkbox"> Green</label>
+      <label><input type="checkbox"> Black</label>
+    </div>
+    </div>
+
+    <label>Additional Comments</label>
+    <textarea placeholder="Enter any additional comments or instructions"></textarea>
+
+   <h2>Payment Details</h2>
+    <label>Payment Method</label>
+    <select required>
+      <option value="" disabled selected>Select a payment method</option>
+      <option>Credit Card</option>
+      <option>Bank Transfer</option>
+      <option>PayPal</option>
+      <option>Cash on Delivery</option>
+    </select>
+
+    <div class="terms">
+      <label><input type="checkbox" required> I accept the terms and conditions.</label>
+      </div>
+      
+    <div style="width: 50%; margin-left: 120px; margin-top: 25px; margin-bottom: 20px;">
+          <input type="submit" value="Register Now!">
+        </div>
+  
+</body>
+</html>

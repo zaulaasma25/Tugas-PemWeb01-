@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration Class Form</title>
+   <style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+ header,
+ main,
+ footer {
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 0.75rem 1rem;
+     /* 🔹 Diperpendek padding */
+ }
+
+ header {
+     background: white;
+     border-bottom: 1px solid #e6e6e9;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ h1 {
+     margin: 0 0 .5rem;
+     font-size: 1.3rem;
+ }
+
+ section {
+     background: white;
+     border: 1px solid #e6e6e9;
+     border-radius: .75rem;
+     padding: 1rem 1.5rem;
+     margin: 0.75rem 0;
+     /* 🔹 Jarak antar section dikurangi */
+ }
+
+ fieldset {
+     border: 1px solid #dcdce0;
+     border-radius: .5rem;
+     padding: 1rem 1.25rem;
+     margin-bottom: 1rem;
+ }
+
+ legend {
+     padding: 0 .5rem;
+     font-weight: 600;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: var(--gap);
+ }
+
+ .row {
+     display: grid;
+     grid-template-columns: 150px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+     font-size: 15px;
+     padding-top: ;
+     text-align: 0.5rem;
+ }
+ 
+ p {
+   margin-top: 2px;
+   font-size: 15px;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="range"] {
+     width: 100%;
+     max-width: 500px;
+     padding: .55rem .6rem;
+     border: 1px solid #cfd3d8;
+     border-radius: .5rem;
+     background: #fff;
+     box-sizing: border-box;
+ }
+
+ input[type="color"] {
+     padding: 0;
+     height: 2.25rem;
+ }
+
+ textarea {
+     min-height: 90px;
+ }
+
+ .actions {
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+     margin-top: .75rem;
+     /* 🔹 Diperpendek sedikit */
+ }
+
+ button,
+ input[type="submit"],
+ input[type="reset"] {
+     border: 1px solid #000;
+     background: #000;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .2rem;
+     text-align: center;
+     font-weight: bold;
+     cursor: ;
+ }
+
+ input[type="tel"],
+ input[type="email"],
+ input[type="text"],
+ input[type="reset"] {
+     border-color: #9e9e9e;
+     background: #fff;
+     border-radius: .2rem;
+     padding: .8rem;
+     margin-bottom: 20px;
+     margin-left: 0px;
+ }
+ 
+ input[type="option"] {
+     border-color: #9e9e9e;
+     background: #fff;
+     border-radius: .2rem;
+     padding: .8rem;
+     margin-bottom: 20px;
+     margin-left: 0px;
+ }
+     
+ footer {
+     color: #666;
+     font-size: .9rem;
+     text-align: center;
+     padding-top: .5rem;
+     /* 🔹 Jarak atas footer diperpendek */
+ }
+
+ @media (max-width: 720px) {
+
+     header,
+     main,
+     footer {
+         padding: 0.75rem;
+     }
+
+     section {
+         padding: 1rem;
+         margin: 0.75rem 0.5rem;
+     }
+
+  fieldset {
+         padding: 1rem;
+     }
+
+  .row {
+         grid-template-columns: 1fr;
+         gap: .5rem;
+     }
+
+     input,
+     select,
+     textarea {
+         max-width: 100%;
+     }
+
+     .actions {
+         justify-content: center;
+     }
+     
+.checkbox-container label {
+    display: inline-block;
+    height: 10px;
+    width: 150px;
+    vertikal-align: middle;
+    margin: 0.5rem 0;
+    /* Menambah jarak horizontal di sebelah kanan setiap label */
+}
+
+.checkbox-item {
+    margin-top: 15px;
+    padding-right:15px;
+    text-align: left;
+}
+ }
+
+ </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="row">
+        <h1>Class Registration Form</h1>
+      </div>
+      <div>
+       <p>Please fill out the form below to register for our class</p>
+      <form>
+       <input style="width: 170px;" type="text" placeholder="First name" size="10" >
+       <input style="width: 170px; margin-left: 10px; " type="text" placeholder="Last name" size="10">
+       <input style="width: 140px; " type="email" placeholder="Email Address" size="10">
+       <input style="width: 145px;  margin-left: 10px;" type="tel" placeholder="Phone Number" size="8">
+       </div>
+       
+       <div>
+         <label>Class Level</label>
+         <select type="option" style="border-radius: 2px; weight:165px; height: 50px;">
+          <option  value="" disabled selected>Select your class Level</option>
+          <option>SD</option>
+          <option>SMP</option>
+          <option>SMA</option>
+          <option>Kuliah</option>
+        </select>
+        <p style="color: grey;"><small>Please choose the appropriate level for your exprerience</small></p>
+       </div>
+      
+       <div>
+         <label>Class Days</label>
+         <p style="color: grey;">
+         <small>Please select the days you are available to attend class</small></p>
+       <div class="checkbox-container">
+         <div class="label"></div>
+          <input type="checkbox" id="Monday">
+          <label for="monday" style="text-align: auto;">Monday</label>
+          <input type="checkbox" id="Tuesday">
+          <label for="Tuesday">Tuesday</label>
+          <br>
+           <input type="checkbox"id="Wednesday">
+          <label for="Wednesday">Wednesday</label>
+           <input type="checkbox" id="Thursday">
+          <label for="Thursday">Thursday</label>
+          <br>
+           <input type="checkbox" id="Friday">
+          <label for="Friday">Friday</label>
+           <input type="checkbox" id="Saturday">
+          <label for="Saturday">Saturday</label>
+        </div>
+        <div class="checkbox-item">
+            <input type="checkbox" id="agree">
+            <label for="agree">I agree to the terms and conditions of the class<br>registration</label>
+        </div>
+        <div style="width: 50%; margin-left: 120px; margin-top: 25px; margin-bottom: 20px;">
+          <input type="submit" value="Register Now!">
+        </div>
+       </div>
+      </form>
+    </section>
+  </main>
+  
+</body>
+</html>

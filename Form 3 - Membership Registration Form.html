@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<style> :root {
+     --gap: 1rem;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+     line-height: 1.5;
+     margin: 0;
+     background: #f7f7f8;
+     color: #222;
+ }
+
+ header,
+ main,
+ footer {
+     max-width: 900px;
+     margin: 0 auto;
+     padding: 0.75rem 1rem;
+     /* 🔹 Diperpendek padding */
+ }
+
+ header {
+     background: white;
+     border-bottom: 1px solid #e6e6e9;
+     position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ h1 {
+     margin: 0 0 .5rem;
+     font-size: 1.3rem;
+ }
+
+ section {
+     background: white;
+     border: 1px solid #e6e6e9;
+     border-radius: .75rem;
+     padding: 1rem 1.5rem;
+     margin: 0.75rem 0;
+     /* 🔹 Jarak antar section dikurangi */
+ }
+
+ fieldset {
+     border: 1px solid #dcdce0;
+     border-radius: .5rem;
+     padding: 1rem 1.25rem;
+     margin-bottom: 1rem;
+ }
+
+ legend {
+     padding: 0 .5rem;
+     font-weight: 600;
+ }
+
+ .grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: var(--gap);
+ }
+
+ .row {
+     display: grid;
+     grid-template-columns: 150px 1fr;
+     align-items: center;
+     gap: .75rem;
+ }
+
+ label {
+     font-weight: 600;
+     font-size: 15px;
+     padding-top: ;
+     text-align: 0.5rem;
+ }
+ 
+ p {
+   margin-top: 2px;
+   font-size: 15px;
+ }
+
+ input[type="text"],
+ input[type="password"],
+ input[type="number"],
+ input[type="date"],
+ input[type="time"],
+ input[type="url"],
+ input[type="search"],
+ input[type="color"],
+ input[type="file"],
+ select,
+ textarea,
+ input[type="range"] {
+     width: 100%;
+     max-width: 500px;
+     padding: .55rem .6rem;
+     border: 1px solid #cfd3d8;
+     border-radius: .5rem;
+     background: #fff;
+     box-sizing: border-box;
+ }
+
+ input[type="color"] {
+     padding: 0;
+     height: 2.25rem;
+ }
+
+ textarea {
+     min-height: 90px;
+ }
+
+ .actions {
+     display: flex;
+     gap: .75rem;
+     flex-wrap: wrap;
+     margin-top: .75rem;
+     /* 🔹 Diperpendek sedikit */
+ }
+
+ button,
+ input[type="submit"],
+ input[type="reset"] {
+     border: 1px solid #000;
+     background: #0043f9;
+     color: white;
+     padding: .6rem 1rem;
+     border-radius: .3rem;
+     text-align: center;
+     font-weight: bold;
+     cursor: ;
+ }
+
+ input[type="tel"],
+ input[type="email"],
+ input[type="text"],
+ input[type="reset"] {
+     border-color: #9e9e9e;
+     background: #fff;
+     border-radius: .2rem;
+     padding: .8rem;
+     margin-bottom: 20px;
+     margin-left: 0px;
+ }
+ 
+ input[type="option"] {
+     border-color: #9e9e9e;
+     background: #fff;
+     border-radius: .2rem;
+     padding: .8rem;
+     margin-bottom: 20px;
+     margin-left: 0px;
+ }
+     
+ footer {
+     color: #666;
+     font-size: .9rem;
+     text-align: center;
+     padding-top: .5rem;
+     /* 🔹 Jarak atas footer diperpendek */
+ }
+
+ @media (max-width: 720px) {
+
+     header,
+     main,
+     footer {
+         padding: 0.75rem;
+     }
+
+     section {
+         padding: 1rem;
+         margin: 0.75rem 0.5rem;
+     }
+
+  fieldset {
+         padding: 1rem;
+     }
+
+  .row {
+         grid-template-columns: 1fr;
+         gap: .5rem;
+     }
+
+     input,
+     select,
+     textarea {
+         max-width: 100%;
+     }
+
+     .actions {
+         justify-content: center;
+     }
+     
+.checkbox-container label {
+    display: inline-block;
+    height: 10px;
+    width: 150px;
+    vertikal-align: middle;
+    margin: 0.5rem 0;
+    /* Menambah jarak horizontal di sebelah kanan setiap label */
+}
+
+.checkbox-item {
+    margin-top: 15px;
+    padding-right:15px;
+    text-align: left;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem; /* Jarak antara kedua kotak */
+  flex-wrap: wrap; /* Untuk tampilan responsif */
+}
+
+.checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 10px;
+      margin-bottom: 1rem;
+}
+  
+.checkbox-grid label,
+.radio-group label {
+      font-weight: normal;
+      color: #333;
+      font-size: 0.9rem;
+    }
+    
+.form-container {
+  display: flex;
+  gap: 16px; /* Memberikan jarak antar kolom */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Membuat setiap kolom mengambil ruang yang sama */
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+ }
+
+ </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="row">
+        <div>
+        <h1>Membership Registration Form</h1>
+        <p>Please fill out the form below to become a member</p>
+      </div>
+      
+      <div class="form-container">
+        <div class="form-group">
+        <label for="first-name">First Name</label>
+        <br>
+        <input style="width: px;" type="text" placeholder="First name" size="" >
+        </div>
+        <div class="form-group">
+        <label style="margin-bottom: px;">Last Name</label>
+        <input style="width: 170px; margin-left: 10px; " type="text" placeholder="Last name" size="10">
+        <div class="form-group">
+        <label>Email Address</label>
+        <input style="width: px; " type="email" placeholder="Email Address" size="10">
+        </div>
+        <label>Phone Number</label>
+        <input style="width: px;  margin-left: px;" type="tel" placeholder="Phone Number" size="">
+        </div>
+       </div>
+       
+       <div>
+         <div class="input-row">
+         <div>
+         <label>Address Line 1</label>
+         <input type="text" placeholder="Enter your address line 1" required>
+          </div>
+        <div>
+          <label>Address Line 2</label>
+          <input type="text" placeholder="Enter your address line 2">
+           </div>
+         </div>
+       </div>
+       
+       <div>
+        <label>Country</label>
+        <select required>
+         <option selected>United States of America</option>
+         <option>Canada</option>
+         <option>Australia</option>
+         <option>United Kingdom</option>
+        </select>
+       </div>
+      
+       <div>
+       <label>Membership Type</label>
+        <div class="radio-group">
+        <label><input type="radio" name="membership" required> Basic</label>
+        <label><input type="radio" name="membership"> Premium</label>
+        <label><input type="radio" name="membership"> Elite</label>
+         </div>
+        </div>
+        
+        <div class="section-title">Interests</div>
+          <label>Favorite Sports</label>
+         <div class="checkbox-grid">
+            <label><input type="checkbox"> Football</label>
+            <label><input type="checkbox"> Basketball</label>
+            <label><input type="checkbox"> Baseball</label>
+            <label><input type="checkbox"> Hockey</label>
+            <label><input type="checkbox"> Soccer</label>
+            <label><input type="checkbox"> Other</label>
+         </div>
+         <div>
+           <p>Why do you want to become a member?</p>
+           <input type="textarea" style="width: 340px; height: 100px;" placeholder="I agree to the terms and conditions.">
+         </div>
+         <div>
+           <label>
+             <input type="checkbox">I agree to the terms and conditions
+           </label>
+         </div>
+         <div style="width: 100%; margin-left: 120px; margin-top: 25px; margin-bottom: 20px;">
+          <input type="submit" value="Submit Registration">
+        </div>
+      </div>
+    </section>
+  </main>
+  
+</body>
+</html>

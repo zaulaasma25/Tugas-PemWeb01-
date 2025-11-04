@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Sign Up Form</title>
+
+  <!-- Jika kamu sudah punya file style t5.css, hubungkan -->
+  <link rel="stylesheet" href="style t5.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: #f7f7f8;
+      padding: 40px 15px;
+      box-sizing: border-box;
+    }
+
+    form {
+      background: #fff;
+      border: 1px solid #e6e6e9;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 420px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        white-space: normal;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .input-row div {
+      flex: 1;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cfd3d8;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: 6px;
+      color: #111;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 10px;
+      margin-bottom: 1rem;
+    }
+
+    .checkbox-grid label {
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 25px;
+      border-radius: 6px;
+      display: block;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      width: 45%;
+    }
+
+    button:hover {
+      background-color: #005fc9;
+    }
+
+    @media (max-width: 600px) {
+      form {
+        width: 100%;
+        padding: 1.5rem;
+      }
+
+      .input-row {
+        flex-direction: column;
+      }
+
+      button {
+        width: 100%;
+        max-width: 220px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Volunteer Sign Up Form</h1>
+    <p>Please fill out the following form to become a volunteer.</p>
+
+    <!-- First & Last Name -->
+    <div class="input-row">
+      <div>
+        <label>First Name</label>
+        <input type="text" placeholder="Enter your first name" required>
+      </div>
+      <div>
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter your last name" required>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email address" required>
+
+    <!-- Phone Number -->
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" required>
+
+    <!-- Date of Birth -->
+    <label>Date of Birth</label>
+    <input type="date" placeholder="Select your date of birth" required>
+
+    <!-- Volunteer Role -->
+    <label>Preferred Volunteer Role</label>
+    <select required>
+      <option value="" disabled selected>Select your preferred volunteer role</option>
+      <option>Community Outreach</option>
+      <option>Fundraising</option>
+      <option>Event Organizer</option>
+      <option>Medical Support</option>
+    </select>
+
+    <!-- Availability -->
+    <div class="section-title">Availability</div>
+
+    <label>Days Available</label>
+    <small>Select the days you are available to volunteer.</small>
+    <div class="checkbox-grid">
+      <label><input type="checkbox"> Monday</label>
+      <label><input type="checkbox"> Tuesday</label>
+      <label><input type="checkbox"> Wednesday</label>
+      <label><input type="checkbox"> Thursday</label>
+      <label><input type="checkbox"> Friday</label>
+      <label><input type="checkbox"> Saturday</label>
+      <label><input type="checkbox"> Sunday</label>
+    </div>
+
+    <div class="input-row">
+      <div>
+        <label>Available Start Time</label>
+        <input type="time" value="09:00">
+      </div>
+      <div>
+        <label>Available End Time</label>
+        <input type="time" value="17:00">
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section-title">Skills and Interests</div>
+
+    <label>Skills and Experience</label>
+    <textarea placeholder="Enter your skills and experience."></textarea>
+    <small>Please describe your skills and experience relevant to the volunteer role.</small>
+
+    <label>Interests</label>
+    <small>Select your interests.</small>
+    <div class="checkbox-grid">
+      <label><input type="checkbox"> Animals</label>
+      <label><input type="checkbox"> Children</label>
+      <label><input type="checkbox"> Elderly</label>
+      <label><input type="checkbox"> Environment</label>
+      <label><input type="checkbox"> Health</label>
+      <label><input type="checkbox"> Homelessness</label>
+      <label><input type="checkbox"> Poverty</label>
+    </div>
+
+    <!-- Terms -->
+    <div class="terms">
+      <input type="checkbox" required>
+      <label>I agree to the terms and conditions of the volunteer program.</label>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
